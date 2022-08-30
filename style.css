@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 260px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #1d1d1d;
+    color: #fff;
+    padding: 0 0.8em;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 10px #202020;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    width: 115%;
+    height: 112%;
+    z-index: -1;
+    background: linear-gradient(to right , #272727 ,#2a2a2a);
+    border-radius: 20px;
+    transition: background .4s ;
+}
+
+.container:hover::before {
+    background: linear-gradient(to right , #9d50d6 , #be48aa);
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .4s ;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(to right , #9d50d6 , #be48aa);
+}
+
+i {
+    cursor: pointer;
+    transition: transform .4s ;
+}
+
+.box:hover i {
+    transform: scale(1.5);
+}
